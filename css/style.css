@@ -4557,11 +4557,20 @@ a.theme-btn-on-bg:active,
   position: relative;
   /* background-color: #4c4867; */
   transition: max-height 650ms;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  padding: 0 15px;
+
+  border-radius: 6px;
+  line-height: 1.8;
+  font-size: 0.95rem;
+  color: #333;
 }
 
 .answer p {
   color: #4c4867;
-  font-size: 15px;
+  font-size: 1rem;
   padding: 0.1 rem;
 }
 
@@ -4574,5 +4583,42 @@ a.theme-btn-on-bg:active,
 }
 
 .accordion-item:target .accordion-link .ion-md-arrow-down {
+  display: block;
+}
+
+.answer.open {
+  max-height: 300px; /* 根據內容調整 */
+  /* padding: 10px 15px; */
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  margin: 0 5px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.accordion-link {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.answer.open {
   display: block;
 }
